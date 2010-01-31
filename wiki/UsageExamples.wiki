@@ -1,4 +1,4 @@
-#labels Phase-Implementation
+#labels Phase-Implementation,Featured
 ==Using the default strategy to find the settings==
 
 Here an example on how to detect the proxy settings by using the predefined search strategies.
