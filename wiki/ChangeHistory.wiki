@@ -1,0 +1,12 @@
+#labels Phase-Support,Featured
+==Change History==
+
+This page show a change history for all major changes done in new releases.
+I use the following convention:<br>
+*`*`* `=` Program change, *+* `=` new feature, *-* `=` removed feature
+
+=== 20100411 ===
+`*` Fixed [http://code.google.com/p/proxy-vole/issues/detail?id=4 Issue 4]: Improved parser used to parse proxy urls from environment varibales and other places  <br>
+
+=== Older===
+Did not track changes for older releases
