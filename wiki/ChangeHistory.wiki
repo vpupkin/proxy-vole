@@ -5,6 +5,17 @@ This page show a change history for all major changes done in new releases.
 I use the following convention:<br>
 *`*`* `=` Program change, *+* `=` new feature, *-* `=` removed feature
 
+
+=== Current repository version ===
++ PAC support on Java 1.6 will now use the javax.script framework and the internal javascript engine that is shipped with JRE6. This will allow you to support PAC without bundling the Rhino engine which will dramatically reduce the footprint of the library. 
+Java 1.5 will still be supported but then you need to bundle it with the Rhino engine.
+
++ Added contributed dlls to support 64 windows version for the IE proxy detection.
+
+`*` Some fixes for the http client that is used to download PAC scripts from a webserver. We accept now all content-type send by the server and we support now different charsets for the scripts.
+
+`*` Fixed some unit tests that did not pass and did some other small fixes.
+
 === 20100724 ===
 `*` Fixed [http://code.google.com/p/proxy-vole/issues/detail?id=5 Issue 5]: PAC Parser was not working correctly in multithreaded environments. <br>
 
