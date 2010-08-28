@@ -92,6 +92,19 @@ Authenticator.setDefault(new Authenticator() {
 }}}
 Note that we test who is requesting the password. In this case we only handle requests from a proxy server (line 4). You could also check for the hostname or the protocol or use a dialog to ask a user to enter a password instead of returning a hardcoded value.
 
+==Some notes on PAC support and Java 1.5==
+proxy-vole is compatible with Java 1.5 with a small exception. We have a few classes (JavaxPacScriptParser.java and some corresponding unit tests) that will only compile on Java 1.6. If you need to compile the source under Java 1.5, just remove these classes and and all should compile.
+
+Without these classes you need to ship the Rhino javascript engine (js.jar) with your application if you need PAC support in Java 1.5.
+
+On Java 1.6 all will compile out of the box and you do not ship the js.jar at all.
+
+The build binary release of proxy-vole is compatible with Java 1.5 and this is done with the following trick.
+
+  * If we run under Java 1.6 or higher use the build in javascript support
+  * If we do not have build in javascript support but the Rhino engine is on the  classpath use that one.
+  * If no javascript engine is found then PAC script parsing will not be supported.
+
 ==Summary==
 The examples above show pretty much everything that you can do with the Proxy - Vole library at the moment. To find out more about the available search strategies please consult the [http://proxy-vole.kenai.com/release/current/javadoc/ JavaDoc].
 
