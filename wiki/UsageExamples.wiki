@@ -41,7 +41,7 @@ ProxySelector myProxySelector = proxySearch.getProxySelector();
 		
 ProxySelector.setDefault(myProxySelector);
 }}}
-Here we use a proxy search strategy customized for different platforms. On windows we try InterentExplorer, Firefox and finally the Java System properties (lines 3-6).
+Here we use a proxy search strategy customized for different platforms. On windows we try InternetExplorer, Firefox and finally the Java System properties (lines 3-6).
 
 On Linux systems we try to detect the desktop settings first for Gnome then for KDE and if both are not set we try Firefox settings (line 8-11).
 
@@ -104,6 +104,23 @@ The build binary release of proxy-vole is compatible with Java 1.5 and this is d
   * If we run under Java 1.6 or higher use the build in javascript support
   * If we do not have build in javascript support but the Rhino engine is on the  classpath use that one.
   * If no javascript engine is found then PAC script parsing will not be supported.
+
+==Editing debugging and testing==
+If you need to know what is going on inside of the library you may want to install a logger on proxy-vole.
+
+{{{
+   Logger.setBackend(new MyLogger());
+}}}
+proxy-vole does not use Log4J, `LogBack` or SLF4J because I want to make sure that the library is as light weight as possible with no external dependencies.
+
+If you want to test the PAC parser then you may face the problem that the myIPAddress() method may return you different results on different machines. For unit testing you can set the system property *com.btr.proxy.pac.overrideLocalIP* to a value and then this value will be always used as myIPAddress in all PAC scipts. 
+
+Example:
+{{{ 
+   System.setProperty(PacScriptMethods.OVERRIDE_LOCAL_IP, "123.123.123.123");
+}}}
+
+
 
 ==Summary==
 The examples above show pretty much everything that you can do with the Proxy - Vole library at the moment. To find out more about the available search strategies please consult the [http://proxy-vole.kenai.com/release/current/javadoc/ JavaDoc].
