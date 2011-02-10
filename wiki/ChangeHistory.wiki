@@ -6,6 +6,8 @@ I use the following convention:<br>
 *`*`* `=` Program change, *+* `=` new feature, *-* `=` removed feature
 
 === Current Repository Version ===
+`*` Fixed issue 11: Parsing was unreliable when a PAC script returned more than one proxy
+
 `*` Some code cleanup to fix some minor problems (platform detection issues and others)
 
 + Added a debug system property "com.btr.proxy.pac.overrideLocalIP" for the PAC parser
