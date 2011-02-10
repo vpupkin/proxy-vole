@@ -6,6 +6,8 @@ I use the following convention:<br>
 *`*`* `=` Program change, *+* `=` new feature, *-* `=` removed feature
 
 === Current Repository Version ===
+
+=== 20110210 ===
 `*` Fixed issue 11: Parsing was unreliable when a PAC script returned more than one proxy
 
 `*` Some code cleanup to fix some minor problems (platform detection issues and others)
@@ -26,10 +28,10 @@ Java 1.5 will still be supported but then you need to bundle it with the Rhino e
 `*` Fixed some unit tests that did not pass and did some other small fixes.
 
 === 20100724 ===
-`*` Fixed [http://code.google.com/p/proxy-vole/issues/detail?id=5 Issue 5]: PAC Parser was not working correctly in multithreaded environments. <br>
+`*` Fixed issue 5: PAC Parser was not working correctly in multithreaded environments. <br>
 
 === 20100411 ===
-`*` Fixed [http://code.google.com/p/proxy-vole/issues/detail?id=4 Issue 4]: Improved parser used to parse proxy urls from environment varibales and other places  <br>
+`*` Fixed issue 4: Improved parser used to parse proxy urls from environment varibales and other places  <br>
 
 === Older===
 Did not track changes for older releases
