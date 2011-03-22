@@ -6,6 +6,7 @@ I use the following convention:<br>
 *`*`* `=` Program change, *+* `=` new feature, *-* `=` removed feature
 
 === Current Repository Version ===
+`*` Fixed issue 12: The PAC JavaScript method isInNet did not work for all patterns. This is fixed now.
 
 === 20110210 ===
 `*` Fixed issue 11: Parsing was unreliable when a PAC script returned more than one proxy
