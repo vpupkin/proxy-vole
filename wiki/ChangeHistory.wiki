@@ -6,7 +6,9 @@ I use the following convention:<br>
 *`*`* `=` Program change, *+* `=` new feature, *-* `=` removed feature
 
 === Current Repository Version ===
-+ Added experimental support for OSX. This is work in progress
+
+=== 20110515 ===
++ Added (experiemental) support for Max OSX. This is not very well tested yet but should work.
 
 + Fixed  issue 15 : The Firefox proxy search lacked support for socks proxy. This is now available.
 
