@@ -7,7 +7,7 @@ I use the following convention:<br>
 
 === Current Repository Version ===
 
-=== 20120905 ===
+=== 20120920 ===
 `*` Improved the fix for issue 26: PAC download recursion bug 
 
 === 20120905 ===
