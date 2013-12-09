@@ -7,6 +7,19 @@ I use the following convention:<br>
 
 === Current Repository Version ===
 
+
+=== 20131209 ===
+
+`*` Fixed issue with myIPAddress() returning 127.0.0.1 instead of the real address on linux
+
+`*` Fixed  issue 46 : Handle cleanup of temp files more robust
+
+`*` Fixed  issue 44 : Selecting bluetooth interface in OS/X 10.8
+
+`*` Fixed  issue 39 : Default timeout is used when fetching PAC script, causes 5 minute delay
+
+`*` Fixed  issue 38 : Detect invalid PAC scripts early and abort
+
 `*` Fixed  issue 36 : methods returned java.lang.String objects instead of JS strings
 
 === 20121203 === 
